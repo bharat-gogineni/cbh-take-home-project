@@ -8,3 +8,11 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
+
+## Explanation
+
+Instead of storing keys and Secrets a dotenv was added to store variables into a .env file.
+Most of the if else cases require only one condition to primarily work.
+In the code provided  the candidate was initiated with a base value and altered if there exists a partition key provided by the user or if some input was provided
+The hash function was used internally to add some reusability for future.
+4 test cases were created one when no input was provided ,one when partition key was provided one where no partition key was provided but data was sent and one case where data was greater than 256 characters
